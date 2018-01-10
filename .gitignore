@@ -1,0 +1,16 @@
+/local_build*
+/build/
+/build*/
+/cmake-build*
+.DS_Store
+/data
+*.dSYM
+/videotools/test
+/cmake-build-debug
+/.idea
+/utils/tests/test_cached_producer
+*.pyc
+*.npz
+.idea
+*.so
+*.a
