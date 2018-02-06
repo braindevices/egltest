@@ -79,9 +79,9 @@ void printEGLcfg(EGLDisplay dpy, const EGLConfig & config) {
         EGLint value = -1;
         auto returnVal = eglGetConfigAttrib(dpy, config, egl_cfgattrib_names[j].attribute, &value);
         if (returnVal) {
-            printf(" %s(%#x): %d (0x%x)", egl_cfgattrib_names[j].name, egl_cfgattrib_names[j].attribute, value, value);
+            printf(" %s(%#x): %d (0x%x),", egl_cfgattrib_names[j].name, egl_cfgattrib_names[j].attribute, value, value);
         } else {
-            printf(" %s(%#x): fail to obtain", egl_cfgattrib_names[j].name, egl_cfgattrib_names[j].attribute);
+            printf(" %s(%#x): fail to obtain,", egl_cfgattrib_names[j].name, egl_cfgattrib_names[j].attribute);
         }
     }
     printf("\n");
