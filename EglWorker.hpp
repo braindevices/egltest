@@ -15,9 +15,9 @@ inline void wait(float seconds) {
 
 static const int MAX_DEVICES = 4;
 
-class multithreadegl {
+class EglWorker {
 public:
-    multithreadegl(int myid, float idelsec, EGLint &configAttribs[], EGLint &pbufferAttribs[]);
+    EglWorker(int myid, float idelsec, const EGLint configAttribs[], const EGLint pbufferAttribs[]);
     void eglwork();
 
 private:
@@ -25,6 +25,8 @@ private:
     float _idelsec;
     EGLDeviceEXT eglDevs[MAX_DEVICES];
     EGLint numDevices;
+    const EGLint *_configAttribs;
+//    const EGLint *_pbufferAttribs;
 };
 
 
